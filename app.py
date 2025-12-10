@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import columns
+from utils import PREPROCESSOR, columns
 
 import numpy as np
 import pandas as pd
