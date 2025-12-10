@@ -27,7 +27,6 @@ def predict():
     prediction = model.predict(test)
     if prediction[0] == 1: 
         st.success("Passenger Survived 👍 ")
-        st.session_state.scroll_to_top = True
     else: 
         st.error("Passenger did not Survive 👎 ") 
 
