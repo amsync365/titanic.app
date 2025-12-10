@@ -22,7 +22,7 @@ embarked = st.select_slider("Did they Embark?", ['S','C','Q'])
 
 
 def predict():
-    row=np.array([passengerid, pclass, name, sex, age, sibsp, parch, ticket, fare, cabin, embarked])
+    row=np.array([passengerid, pclass, name, sex, float(age), sibsp, parch, ticket, fare, cabin, embarked])
     test = pd.DataFrame([row], columns=columns)
     prediction = model.predict(test)
     if prediction[0] == 1: 
