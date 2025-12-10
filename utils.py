@@ -8,7 +8,7 @@ class PREPROCESSOR(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X, y=None):
-        X['Age'] = self.ageimputer.transform(X[['Age']])[:, 0]
+        X['Age'] = self.ageimputer.transform(X[['Age']])
         X['Cabin_Class'] = X.Cabin.fillna('M').apply(lambda x: str(x).replace(' ', '')).apply(lambda x: re.sub(r'[^a-zA-z]','',x))
         X['Cabin_num'] = X.Cabin.fillna('M').apply(lambda x: str(x).replace(' ', '')).apply(lambda x: re.sub(r'[^0-9]', '', x)).replace('',0)
         X.Embarked = X.Embarked.fillna('M')
