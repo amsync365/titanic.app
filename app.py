@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import joblib
 
-model = joblib.load(r'C:\Users\Admin\Desktop\streamlit_titanic\pipe.titanic')
+model = joblib.load('pipe.titanic')
 st.title('Will you survive if you were among Titanic passengers or not :ship:')
 # PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 passengerid = st.text_input("Input Passenger ID", '8585')
